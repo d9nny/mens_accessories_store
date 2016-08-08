@@ -2,15 +2,20 @@
 
 ## Introduction
 
-Page designs for a mens accessories online store.
+App built for a mens accessories online store.
 
 ## Installation
 
 From the command line, run
 ```sh
 $ git clone
+$ npm install
+$ bower install
 ```
 
-## Viewing
+## To run the app
 
-Open each index.html in your browser.
+From the command line, run
+```sh
+$ npm start
+```
