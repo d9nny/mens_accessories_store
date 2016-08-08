@@ -2,13 +2,13 @@
 
 ## Introduction
 
-App built for a mens accessories online store.
+App built for an online store selling mens accessories.
 
 ## Installation
 
 From the command line, run
 ```sh
-$ git clone
+$ git clone https://github.com/d9nny/mens_accessories_store
 $ npm install
 $ bower install
 ```
