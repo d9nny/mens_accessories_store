@@ -1,1 +1,43 @@
-<h1>Contact</h1>
+<section class='container'>
+	
+	<div class='row'>
+		
+		<h1>Get in touch!</h1>
+		<br/><br/>
+
+		<div ng-if='responseMessage' class='alert alert-success'>
+			<h4>Thank you! Your message has been sent.</h4>
+		</div>
+
+		<div ng-if='!responseMessage'>
+
+			<p>If you have any questions or feedback, we'd love to hear from you!<br/>
+				 Fill out the form below and we'll get back to you as quickly as possible.
+			</p><br/>
+
+		  <form name='helpForm' novalidate role='form'>
+
+		  	<div class='form-group'>
+		  		<label for='name'>Your Name</label>
+		  		<span class='label label-danger' ng-show='submitted && helpForm.name.$error.required'>Required!</span>
+		  		<input type='text' name='name' ng-model='name' class='form-control' required>
+		  	</div>
+
+		  	<div class='form-group'>
+		  		<label for='email'>Email</label>
+		  		<span class='label label-danger' ng-show='submitted && helpForm.email.$error.required'>Required!</span>
+		  		<input type='email' name='email' ng-model='email' class='form-control' required>
+		  	</div>
+
+		  	<div class='form-group'>
+		  		<label for='message'>Message</label>
+		  		<span class='label label-danger' ng-show='submitted && helpForm.message.$error.required'>Required!</span>
+		  		<input type='text-area' name='message' ng-model='message' class='form-control' required>
+		  	</div>
+
+		  	<button ng-disabled='progress.active()' ng-click='submit(helpForm)' class='btn btn-default'>Send</button>
+
+		  </form>
+		</div>
+	</div>
+</section>
