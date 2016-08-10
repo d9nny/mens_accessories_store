@@ -19,3 +19,7 @@ From the command line, run
 ```sh
 $ npm start
 ```
+then in your browser navigate to 
+```sh
+http://localhost:5000/#/
+```
