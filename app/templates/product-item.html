@@ -1,0 +1,30 @@
+<section>
+	<div class='container'>
+		
+		<button class='pull-right'><span class='glyphicon glyphicon-remove' aria-hidden='true'></span></button>
+		
+		<div class='row'>
+
+			<div class='col-md-7'>
+				<button class='pull-left' ng-hide='image = 0' ng-click='image -= 1'>
+					<span class='glyphicon glyphicon-menu-left' aria-hidden='true'></span>
+				</button>
+				<div>
+					<img ng-src="product.images[image]">	
+				</div>
+				<button class='pull-left' ng-hide='image = 3' ng-click='image += 1'>
+					<span class='glyphicon glyphicon-menu-left' aria-hidden='true'></span>
+				</button>
+			</div>
+
+			<div class='col-md-5'>
+				<h2>{{product.title}}</h1>
+				<p>{{product.description}}</p>
+				<h4>{{product.price | currency : '£' symbol : fractionSize}}</h3>
+				<button ng-click='addToBasket(product)' class='btn btn-default'>Add to Basket</button>
+			</div>
+
+		</div>
+	</div>
+</section>
+

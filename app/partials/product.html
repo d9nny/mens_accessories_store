@@ -1,1 +1,29 @@
-<h1>Products</h1>
+<section class='container'>
+	<div class='row'>
+
+		<div class='col-md-12'>
+			<h1>Products</h1>
+		</div>
+
+		<div ng-repeat='product in products' ng-mouseover='hoverIn()' 
+				 ng-mouseleave='hoverOut()' class='col-md-4'>
+			
+			<div ng-if='mouseover'>
+				<img ng-src='{{product.images[0]}}'>
+				<h5>{{product.title}}</h5>
+				<p>{{product.price}}</p>
+				<button ng-click='addToBasket(product)' class='btn btn-default'>Add to Basket</button>
+			</div>
+
+			<div ng-if='!!mouseover' ng-click='select(product)'>
+				<img ng-src='{{product.images[1]}}'>
+			</div>
+
+			<div ng-if='clicked'>
+				<div ng-include='"../templates/product-item.html"'></div>
+			</div>
+
+		</div>
+
+	</div>
+</section>
